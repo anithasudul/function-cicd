@@ -3,7 +3,7 @@ import logging
 
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
-@app.route(route="funcdev1")
+@app.route(route="funcqa2")
 def funcdev(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
@@ -20,6 +20,6 @@ def funcdev(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
     else:
         return func.HttpResponse(
-             "This HTTP triggered function executed successfully in dev1 environment.",
+             "This HTTP triggered function executed successfully in qa2 environment.",
              status_code=200
         )
