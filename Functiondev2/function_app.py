@@ -4,7 +4,7 @@ import logging
 app = func.FunctionApp(http_auth_level=func.AuthLevel.FUNCTION)
 
 @app.route(route="funcdev2")
-def funcdev(req: func.HttpRequest) -> func.HttpResponse:
+def funcdev2(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
     name = req.params.get('name')
@@ -20,6 +20,6 @@ def funcdev(req: func.HttpRequest) -> func.HttpResponse:
         return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
     else:
         return func.HttpResponse(
-             "This HTTP triggered function executed successfully in dev2 environment.",
+             "This HTTP triggered function executed successfully dev2 environment. Pass a name in the query string or in the request body for a personalized response.",
              status_code=200
         )
