@@ -1,5 +1,5 @@
 {
-    "azureFunctions.deploySubpath": "Functiondev2",
+    "azureFunctions.deploySubpath": ".",
     "azureFunctions.scmDoBuildDuringDeployment": true,
     "azureFunctions.projectLanguage": "Python",
     "azureFunctions.projectRuntime": "~4",
